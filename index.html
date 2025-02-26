@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google - hj.ver</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,17 +42,43 @@
           <div class="bar-contents">
             <a href="#" class="mail">Gmail</a >
               <a href="#" class="image-contents">이미지</a>
+              <div class="ball"></div>
           </div>
         </bar>
   <main class="main-area">
     <div class="area">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPnxefHYLnvWuIF1nChEInB3ekM6BbxYGzHA&s" width="392" height="129">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPnxefHYLnvWuIF1nChEInB3ekM6BbxYGzHA&s" width="392" height="129" class="image-size">
    <div> <input type="text" class="input-area"/></div>
-   <div><button>Google 검색</button> <button>I'm feeling lucky</button></div>
+   <div><button type="submit" class="btn">Google 검색</button> <button type="submit" class="btn">I'm feeling lucky</button></div>
+      <div><button type="submit" class="none-btn">검색</button><button type="submit" class="none-btn">Lucky</button></div>
   </div>
 
   </main>
-         
-       
+  <footer class="footer-area">
+    <div class="first">
+      대한민국
+      <img class="kr"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARMAAAC3CAMAAAAGjUrGAAABNVBMVEX///8AAADaJR0pFm/YAAD8/Pz5+fnz8/Pu7u7Ozs7IyMj6+vry8vLt7e3dJRqqqqo8PDxMTEzV1dVHR0e/v78mJiY3NzeYmJihoaHhJhVgYGBZWVlBQUEAAGMVFRVvb2+6urqxsbEeHh4tLS2Tk5MrKysbFXFnZ2cLCwvc3Nz76+vsnpzjJhIaAGn98/Lle3jtqKbpko/IIymwITo/F2iXH0iOHk3n5u2qID3AvdC+IjBQRYUhCWxeVI1JPICIgamFhYX1zczfTEfbLSb43t3dQDrfUk3xurniZmPeRUDkcm7nhYLp2N3ATVzOy9mVRWqmACNqbJ5AAFtbDl1SGWOZk7R5HFVjGl3FwtXDIy1vG1l/HFOjIEFNGGXkOy9oAE7YjZC0jqCKhKo+Lnl3b52qpcEzInTd8QzXAAAKRElEQVR4nO2deV/bNhjHY3ISqFvCsZpiQiGkhGKgNJRylQLrvbG1a0fbsasdff8vYbZ8SbacSLakJ/XHvz8CEbbzPF8ePTocS6VSoUKFChUqVKhQoUKFChUqVKiQSD2FNoDQ+BK0BbbuaFPQJmBqadoStA02Em2EoNhI4KE4SEYHCkICDcVFomnToFb48pDAQvGRjAaUAAkklBCJpi1UwczwNI5Zoy0BGYEj0bQbQFYEukmYcxfEBgLJWh3EBkJ3waEQSBYdJNUJADM8NZwXaChTMSSlqQXlVvhquQRgodCQwLU+LZ8AJBQ6Erv1UWqFr1ZIAA4KBcm0++aWQit8tXACUFCSkUBEStgvuem8hYEyCIl6KHhXDUFZIqDcVGLENP6RMSSadkeJFb4acQLqoRD+L8eRLE8qMAIThYBqKEOR1KSbEBE4lIW4//Gi6ryiAeFMx3klCdyOF8mFQkFyi1a0ogRKU9N+cH7OEASWnCJ1UAgks3EkqKjqFKmA0gzCAofSdv+oCgo7EhVQmlhdCaG0/T+TwXNbkhHDkKwQRSuSR8lN/2OJ6tMOD1ABhQyJiViRi2QufC8VCuYxBqWdcIgkKPFaQhatRpDYB0nsqRDpAkFpRpHIh4I760UJUbQaL1qROPdGuutBwZB0OvGjREO5R/iP8ufckKI5qVm2iX+UC6UV/rVDbaVb9EulFlZPVuL+o6KqQiTUSAnUCYrwo8RXnqDVoSCZU4+EGimeOlhRCEVGkl0Y7H+kSIIBUSVB6RBF/lFyum0Lo4UkCUonUtSUiARBWXF+0moJAJIoFNTUlJ7GODUlIrET7arzOjJIqFAowdOUOQisoQHNSsx/SpEiUaAQ941dKLLv29KQEFGiduqeDYpc1WdHCgkDlI50E2r46PhWvMVRf4NnGBRZ0wS4wulXgUgmNtfXNzfT9fMoYYEVqb2ZgfzPjGTzdHvrbKyCZJy/2to+5Z5jGARFDRIfiotkJROSHx88c1Do+pgrXTfs98/vr/NdJhmKKiQulOxINrdtID4NXHqlcvaC61JJUNQhcaBQkPDdFV3fogPxsWzc58kudCgqkZRKaPpmIj2S9dcVIxGIHyz3OS5IgdJU0eJEVEuP5P4wIkiV81P2S6rulFCVHsn6swoDERQrLzeZrzoKUIjpSJ70+mJAHonKMNhDhYQyzu+RAE2lQ7LFGCR+qGwzXxn7IrXi9BoqgMJTcc64kNiqvGG+dgscSQCF5+uOr3iR2FBeM1+9BY7Eg8KFhKW9yQwFEgn3l2Kf80cJgsJXfWCR2D1anlzCl15xKDyJFubxA0xVju9qbadFYkNhb5LBHxDh0Wl6JHaTzN55+45U1dm7anEZL6Htl6E3GcLEVoVv9uC70E/ZkIzpBvjTdcL1c5qeCREoD6BdEK2LjGHiQMlbmv1lIzuTnAXKxa9ZGh0fSr4yytvsRPLW9NTM7FXHbnqeQfshUvvvsrY6SBXO+z4jrePfxDDhmckfcVXNSyFM9OfQnojThfmei4luGBu2DCM6RKoAPuouWB+sPnuO1Y3zq98v+91y+f3n3Z0NggrHlMGo6+1Rl7V7ohsP33e7NhBH9i/9XTxWOOaWRl22dwdsUDYe9j0evrrlXSM419iCdkWU6la5+4gloehjlxEiiEp/xz9ZfwXtiyjtmeUyS0LRd8oUJA6Vxx4UXYf2RZQuTKbKox/QiThQdj0ouWl4PjpMLocFir6TiCSMlNzMF+ybZYZA0fvJSOzTP6HTc9O737ccr/qDs+zG5wFhEpyeHyYm+k//Maj2GI8HI/Fartww+Wi6Xl0lR8rAZOJBOc9TPrkwyURJQzKMiBMoeo6Y7Jm+W7v06mMcDEeCMoo+Bu2LKNWt4H/9mXIzUN/YHVpx0MkHeo5m2jC/yleGHiFy8CcTEqfy5Ge8Y4+LMc/6u2OGjsLFfjWMx4xEbF0aORoXf7Bw17rd948efhrTz3ce7n7uMhNxEkqO5k/8hgfD4oudiH2WkZtmx5mP5XE9mcnGGbQnAnV8NNxjBiZ5mrf3RjyZlZuevSMxlaf/F7QfQvWfgEDp/p2flthRrOVJw+QK2gvBOsyeZa1/oJ0QLAGB8i4/nRNPmZtj619oF4RrL2ugHOVlyh7Tl2xNj7kP7YAMfctSe46+QpsvRZnSrLkHbb4cXaeHYl5DG8+hOs8Chql7s9YJj009iBXlQ1VnV3mag8N0UKxjHpt6UHsPuKrN+uuBMupJGijWIY9NPe6n4oWqhhYSWuWAUk0BhQ9Ji/+JZ5GqeWsrzfJEyjEvFJOr4gSPGMNAqQXLTXFBOeFrfUyu9Io9iq5ySTRftdXw87lWtd832TtvR3zdV/zpfG/9VqUi1nDggrL3hDVUzEOurhqBRHvK548QEXuJLHMtKnxtsmQVy+LrqZFIYFb7oOwTwar6yVAqlvmFb/Fm2lI5Crdeq8+h7msGKKU9m0pyXjmyzBPOEQ517TquHmUm1RY1Lb59CG+ir11/pWOxgTy55k6QNyhI/OXE5au+6HwsihQspyymWLp978MT07QwMEeWZZrHH1INghsUJJz9hNRykWhrJJQ0SNDVLq5PDu3kYTpwvh2eXF+kbkIbBBK/LqmA4iGJQFnMls1q9UZjsp61Q9GgIFEBJUDiQ7kjAIkooZxCLM2NoEg2jtg/K4ACi2SmF/x6g4JE/nKp5G60bvXBdmBtaYr380L+Y1AoSOQvNUyBEmLo+cGjTsj/XrxIEZIbaA2aeeITG/gBvXiRbHn+9+JFOJLmmqREO7nmupsIxRtwrCmEEviPQYnnkqasDekmF30CJJRgAaNgDKYOChYSIZRJChI5UCYXw7CgQsGHpYpyClFLwq1k7ICOIZEBJficpOrTihfJVmKL21iLIxEPZTLiLgUKpUGSqwGdEPc/eDtylFgoRFctCcqABkmGKEhCnx0oUSS2REIhJhq1pCZZKRTKZl0zRKKlIBHbVaFk1aGc5K6oR+w6F+ycGEJBISG3j88PZUryvDk2oYVtJkn0aGUPe3ihyN/bOYBC7K+JQZG/ayIBxZ1oHABFxXbX0xQkxIBwDbNOzuAYg+K3aolQ1OwAPk1BQvRow8keWfMFAZSwoU+AompT9GkKErxvFMyAyZtC8aDgs3lUKOr2iV+gIMHXGfagyJxVmo8ioUJRfQsuGYkNZVkyEgQl+n0TChS1oiBZCpf8t6HInnucxwYN44lNsko140hm8FFyQ/5eIuHc67hG66fMS7cgouoUBYn4XWiZNB6GBQZFXXoNNU1BAgLFv41PQoFAEkLBkQBACb/ZgEOBQeLfjSSRKIeCf9kjhAKFxIUSRaJ4wxlyohFBaQOkV0xTFCRK9ksM1Y5DuQcXJY6WnJdBvTf5okCBFyySkYSyBIwkCqU3/ATpWoBGQkKBzSW+pqCR4FAgWxxcd6CRhFBGBUkABXKrpvaIIfGgwO5e1R4xJAgK9O5V7RFDYida6D3OSiWA3V8LFSpUqFChQoUKFSpUqFChQtL0P8K46RGXohFDAAAAAElFTkSuQmCC" width="16" height="12">
+    </div>
+    <div class="second">
+      <div class="none-a">
+        <a href="#">광고</a>
+        <a href="#">비즈니스</a>
+        <a href="#">검색의 원리</a>
+      </div>
+      <div class="none-a">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">약관</a>
+        <a href="#">설정</a>
+      </div>
+    
+    </div>
+    
+     
+
+
+
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
