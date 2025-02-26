@@ -115,6 +115,16 @@ body{
     font-size: 15px;
   }
 
+  .ball{
+    border: 1.5px solid rgb(197, 194, 194);
+    border-radius: 20px;
+    width: 35px;
+    height: 35px;    
+    margin-right: 30px;
+    margin-top: 13px;
+    
+    background-color: rgb(21, 20, 20);
+  }
 .bar-contents a:hover{
     text-decoration: underline;
   }
