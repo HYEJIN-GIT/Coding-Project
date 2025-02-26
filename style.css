@@ -1,4 +1,4 @@
-body{
+/* body{
     display: contents;
   }
   
@@ -82,4 +82,40 @@ body{
   }
   .a-2:hover{
     text-decoration: underline;
+  } */
+
+  .bar-contents{
+    display: flex;
+    justify-content: end
+  }
+
+  .mail{
+    padding-top: 5px;
+    margin: 16px;
+    text-decoration: none;
+    color: black;
+    
+  }
+
+  .image-contents{
+    padding-top: 5px;
+    margin: 16px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: black;
+  }
+
+.bar-contents a:hover{
+    text-decoration: underline;
+  }
+  .main-area{
+    margin-top: 200px;
+
+  }
+  .area{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
   }
